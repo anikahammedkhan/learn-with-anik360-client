@@ -10,9 +10,10 @@ const Navbar = () => {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/'>Courses</Link></li>
-                    <li><Link to='/'>FAQ</Link></li>
-                    <li><Link to='/'>Blog</Link></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/courses'>Courses</Link></li>
+                    <li><Link to='/faq'>FAQ</Link></li>
+                    <li><Link to='/blog'>Blog</Link></li>
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
@@ -27,7 +28,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <li><Link to='/'>Login</Link></li>
+                    <li><Link to='/login'>Login</Link></li>
                     <li><Link to='/'>Toggle</Link></li>
                 </ul>
             </div>
