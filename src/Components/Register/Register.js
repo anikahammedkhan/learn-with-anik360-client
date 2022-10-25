@@ -17,18 +17,21 @@ const Register = () => {
                             <form className="space-y-8">
                                 <div className="space-y-4">
                                     <div className="space-y-2">
+                                        <label for="name" className="block text-sm">Your Name</label>
+                                        <input type="text" name="name" id="name" placeholder="Your Name here " className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" />
+                                    </div>
+                                    <div className="space-y-2">
                                         <label for="email" className="block text-sm">Email address</label>
-                                        <input type="email" name="email" id="email" placeholder="Your Email " className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" />
+                                        <input type="email" name="email" id="email" placeholder="Your Email " className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" required />
                                     </div>
                                     <div className="space-y-2">
                                         <div className="flex justify-between">
                                             <label for="password" className="text-sm">Password</label>
-                                            <Link to="/resetPassword" className="text-xs hover:underline dark:text-gray-400">Forgot password?</Link>
                                         </div>
-                                        <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" />
+                                        <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" required />
                                     </div>
                                 </div>
-                                <button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-sky-500 dark:text-gray-900 hover:bg-cyan-500">Login</button>
+                                <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-sky-500 dark:text-gray-900 hover:bg-cyan-500">Login</button>
                             </form>
                         </div>
                     </div>
