@@ -16,7 +16,7 @@ const Home = () => {
                         <h1 className="mb-5 text-5xl font-bold text-sky-500">Welcome To <br /> Learn With Anik360</h1>
                         <h3 className='text-2xl font-bold text-sky-500'>Learn Without Limits</h3>
                         <p className="mb-5">Every student can learn, just not on the same day, or the same way. We build our course so that every student can easily learn. Explore Our Courses,We appreciate your feedback.</p>
-                        <button className="btn btn-primary"><Link to='/'>Explore Courses</Link></button>
+                        <button className="btn btn-primary"><Link to='/courses'>Explore Courses</Link></button>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@ const Home = () => {
                 <div className='my-auto'>
                     <h1 className='text-5xl font-bold text-sky-500'>Transform Your Life Through Online Education</h1>
                     <p className='my-5 text-lg font-semibold'>Instructors from around the world teach millions of students on Learn With Anik360. We provide the tools and skills to teach what you love. And you can also achieve your goal.</p>
-                    <button className='btn btn-info'>Find Out How</button>
+                    <Link to='/courses'><button className='btn btn-info'>Find Out How</button></Link>
                 </div>
                 <div>
                     <Lottie animationData={learning1} loop={true} />;

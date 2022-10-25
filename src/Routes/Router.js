@@ -12,7 +12,11 @@ export const routes = createBrowserRouter([
     {
         path: '/', element: <Main />, children: [
             { path: '/', element: <Home /> },
-            { path: '/courses', element: <Courses /> },
+            {
+                path: '/courses',
+                element: <Courses />,
+                loader: () => fetch('https://learn-with-anik360-server.vercel.app/courseData/'),
+            },
             { path: '/faq', element: <Faq /> },
             { path: '/blog', element: <Blog /> },
             { path: '/login', element: <Login /> },
