@@ -1,9 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Lottie from "lottie-react";
 import learning5 from '../../Assets/login.json';
+import { AuthContext } from '../../Context/UserContext';
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+    const [error, setError] = useState('');
+
+
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        signIn(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                form.reset();
+                console.log(user);
+                navigate('/');
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage);
+            });
+    };
+
+
+
     return (
         <div className='grid grid-cols-2 my-12 justify-items-center place-items-center'>
             <div>
@@ -34,21 +61,22 @@ const Login = () => {
                             <p className="px-3 text-center dark:text-gray-400">OR</p>
                             <div className="w-full dark:text-gray-400">
                             </div>
-                            <form className="space-y-8">
+                            <form onSubmit={handleSubmit} className="space-y-8">
                                 <div className="space-y-4">
                                     <div className="space-y-2">
-                                        <label for="email" className="block text-sm">Email address</label>
+                                        <label htmlFor="email" className="block text-sm">Email address</label>
                                         <input type="email" name="email" id="email" placeholder="Your Email " className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" />
                                     </div>
                                     <div className="space-y-2">
                                         <div className="flex justify-between">
-                                            <label for="password" className="text-sm">Password</label>
+                                            <label htmlFor="password" className="text-sm">Password</label>
                                             <Link to="/resetPassword" className="text-xs hover:underline dark:text-gray-400">Forgot password?</Link>
                                         </div>
                                         <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-sky-600" />
                                     </div>
                                 </div>
-                                <button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-sky-500 dark:text-gray-900 hover:bg-cyan-500">Login</button>
+                                <p className='text-red-500'>{error}</p>
+                                <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-sky-500 dark:text-gray-900 hover:bg-cyan-500">Login</button>
                             </form>
                         </div>
                     </div>
