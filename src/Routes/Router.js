@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Components/Blog/Blog";
+import Checkout from "../Components/Checkout/Checkout";
 import Courses from "../Components/Courses/Courses";
 import CoursesLayout from "../Components/CoursesLayout/CoursesLayout";
 import Error from "../Components/Error/Error";
@@ -30,6 +31,11 @@ export const routes = createBrowserRouter([
                         loader: ({ params }) => fetch(`https://learn-with-anik360-server.vercel.app/courseData/${params.courseId}`),
                     }
                 ]
+            },
+            {
+                path: '/checkout/:courseId',
+                element: <Checkout />,
+                loader: ({ params }) => fetch(`https://learn-with-anik360-server.vercel.app/courseData/${params.courseId}`),
             },
             { path: '/faq', element: <Faq /> },
             { path: '/blog', element: <Blog /> },

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const SingleCourses = () => {
     const singleData = useLoaderData();
-    const { title, description, image, price, rating, duration, enrolled } = singleData;
+    const { id, title, description, image, price, rating, duration, enrolled } = singleData;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl my-20">
             <figure><img className='w-[400px]' src={image} alt="Album" /></figure>
@@ -14,8 +14,9 @@ const SingleCourses = () => {
                 <p className='text-lg font-semibold'>Rating: {rating}</p>
                 <p className='text-lg font-semibold'>Duration: {duration}</p>
                 <p className='text-lg font-semibold'>Already Enroled: {enrolled} students</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Checkout</button>
+                <div className="card-actions justify-between">
+                    <button className="btn btn-primary"><Link to='/courses'>Back To Courses Page</Link></button>
+                    <button className="btn btn-info"><Link to={`../../checkout/${id}`}>Get Premium Access</Link></button>
                 </div>
             </div>
         </div>
