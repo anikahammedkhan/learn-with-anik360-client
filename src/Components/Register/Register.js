@@ -6,7 +6,7 @@ import { AuthContext } from '../../Context/UserContext';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { auth, createUser } = useContext(AuthContext);
+    const { auth, createUser, verifyEmail } = useContext(AuthContext);
     const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
@@ -20,6 +20,7 @@ const Register = () => {
             .then((result) => {
                 setError('');
                 form.reset();
+                verifyEmail();
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photoUrl

@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.config';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, sendEmailVerification } from 'firebase/auth';
 
 export const AuthContext = createContext();
 
@@ -41,10 +41,18 @@ const UserContext = ({ children }) => {
         const provider = new GithubAuthProvider();
         return signInWithPopup(auth, provider);
     };
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                console.log('Email verification sent!');
+            }
+            );
+    };
 
 
 
-    const authInfo = { auth, user, createUser, signIn, logOut, signInWithGoogle, signInWithGithub, loading };
+
+    const authInfo = { auth, user, createUser, signIn, logOut, signInWithGoogle, signInWithGithub, verifyEmail, loading };
 
     return (
         <AuthContext.Provider value={authInfo}>

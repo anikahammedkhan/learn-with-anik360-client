@@ -16,9 +16,7 @@ const Login = () => {
         const password = e.target.password.value;
         signIn(email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
                 form.reset();
-                console.log(user);
                 navigate('/');
             })
             .catch((error) => {
@@ -30,8 +28,6 @@ const Login = () => {
     const handleGoogleSignin = () => {
         signInWithGoogle()
             .then((result) => {
-                const user = result.user;
-                console.log(user);
                 navigate('/');
             }).catch((error) => {
                 const errorMessage = error.message;
@@ -41,8 +37,6 @@ const Login = () => {
     const handleGithubSignin = () => {
         signInWithGithub()
             .then((result) => {
-                const user = result.user;
-                console.log(user);
                 navigate('/');
             }).catch((error) => {
                 const errorMessage = error.message;

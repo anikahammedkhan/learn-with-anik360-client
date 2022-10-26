@@ -10,6 +10,7 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
 import SingleCourses from "../Components/SingleCourses/SingleCourses";
 import Main from "../Layout/Main";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/checkout/:courseId',
-                element: <Checkout />,
+                element: <PrivateRoute><Checkout /></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://learn-with-anik360-server.vercel.app/courseData/${params.courseId}`),
             },
             { path: '/faq', element: <Faq /> },
