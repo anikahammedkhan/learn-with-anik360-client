@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 const Checkout = () => {
@@ -36,7 +36,7 @@ const Checkout = () => {
                     <p className="text-sm text-gray-400">Not including taxes and shipping costs</p>
                 </div>
                 <div className="flex space-x-4 justify-center">
-                    <button type="button" className="px-6 py-2 border rounded-md border-violet-400">Back to Course Page</button>
+                    <button type="button" className="px-6 py-2 border rounded-md border-violet-400"><Link to='/courses'>Back to Course Page</Link></button>
                     <button type="button" className="px-6 py-2 border rounded-md bg-violet-400 text-gray-900 border-violet-400">
                         Complete Payment
                     </button>
