@@ -10,7 +10,7 @@ const SingleCourses = () => {
                 <h1 className="my-12 text-4xl font-bold text-sky-500 text-center">Course Details</h1>
                 <button className='btn btn-outline btn-error'>Download Preview</button>
             </div>
-            <div className="card lg:card-side bg-base-100 shadow-xl mb-20 mt-10">
+            <div className="card lg:card-side bg-base-100 shadow-xl mb-20 mt-5">
                 <figure><img className='w-[400px]' src={image} alt="Album" /></figure>
                 <div className="card-body">
                     <h1 className="card-title text-5xl font-bold">{title}</h1>
