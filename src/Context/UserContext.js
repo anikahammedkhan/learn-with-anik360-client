@@ -46,7 +46,7 @@ const UserContext = ({ children }) => {
             .then(() => {
                 console.log('Email verification sent!');
             }
-            );
+            )
     };
 
 
