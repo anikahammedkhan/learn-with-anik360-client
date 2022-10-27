@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Project Name : Learn With  Anik360 [LMS website]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Github Repo Link :
+### Live Website Link :
 
-## Available Scripts
+## Project Details:
 
-In the project directory, you can run:
+Learn With Anik360 is an online based demo learning platform. 
+Learn with Anik360 have 9 Professional courses that can help you to build your  career and will make you professional at work.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Frameworks and Libraries: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React
+* TailwindCSS
+* DaisyUi
+* MambaUi
 
-### `npm test`
+### Website Features and Functionality:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Learn with Anik360 has a wonderful home page design with some interactive section with some Lottie Image.
+* Our website have a responsive navigation menu with our logo. In Tablet and Mobile mode navigation menu will shrink. 
+* In courses page, there is aside navigation bar. Courses page has 9 professional courses listed on both aside nav and courses card view.
+* You can click on aside nav or Details button on car to see details of this course.
+* In course details page you can also Download the details by clicking the top right corner Download Preview button. 
+* If you are a registered user and you are logged in , you can Get Premium Access from clicking button. 
+* If you click on Get Premium Access button , then you will be navigate to Checkout Page.(if you are logged in , otherwise you will be routed to login page)
+* After clicking on Complete Payment , You Will See a success toast.
+* If you are a logged in user, then your profile picture will be shown at navbar and if you click on your profile, you will see your name.
+* There is a toggle button on the navbar to toggle between dark and light mode.
+* In Login page,  You will see 3 Login method. Email password, Google Login and Github Login. You can toggle between register and login page.
+* In register page , to make an account, you need to Put your Full Name, Your Photo URL, Your Email and Password.
+* Both login page and register page will show Error If any error ocurred. 
+* In the Blog page you will see some Question answer.
+* In FAQ section will have some mixed content.
+* If you are logged in you will see logout button on nav , if you are not logged in, you will see login and register button on nav. 
+* Our website is full responsive.(Mobile, Tablet, Desktop)
 
-### `npm run build`
+### If you want to know more about my site, you can just mail me here:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+My email address: anikkhan1105@gmail.com
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Thanks for visiting my site.
