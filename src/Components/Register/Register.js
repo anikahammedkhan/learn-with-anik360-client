@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import learning6 from '../../Assets/register.json';
 import { AuthContext } from '../../Context/UserContext';
 import { updateProfile } from 'firebase/auth';
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const { auth, createUser, verifyEmail } = useContext(AuthContext);
@@ -21,6 +22,7 @@ const Register = () => {
                 setError('');
                 form.reset();
                 verifyEmail();
+                toast.success('Please verify your email address');
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photoUrl
@@ -37,7 +39,7 @@ const Register = () => {
             });
     };
     return (
-        <div className='grid grid-cols-2 my-12 justify-items-center place-items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 my-12 justify-items-center place-items-center px-3'>
             <div>
                 <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-900 dark:text-gray-100">
                     <h2 className="mb-3 text-3xl font-semibold text-center">Register for an account</h2>
@@ -74,7 +76,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='row-start-1 md:col-start-2 w-1/2 md:w-full'>
                 <Lottie animationData={learning6} loop={true} />;
             </div>
         </div>

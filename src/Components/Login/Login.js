@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Lottie from "lottie-react";
 import learning5 from '../../Assets/login.json';
 import { AuthContext } from '../../Context/UserContext';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
@@ -19,6 +20,7 @@ const Login = () => {
         signIn(email, password)
             .then((userCredential) => {
                 form.reset();
+                toast.success('Login Successful');
                 navigate(from, { replace: true });
             })
             .catch((error) => {
@@ -30,7 +32,8 @@ const Login = () => {
     const handleGoogleSignin = () => {
         signInWithGoogle()
             .then((result) => {
-                navigate('/');
+                toast.success('Login Successful');
+                navigate(from, { replace: true });
             }).catch((error) => {
                 const errorMessage = error.message;
                 setError(errorMessage);
@@ -39,16 +42,16 @@ const Login = () => {
     const handleGithubSignin = () => {
         signInWithGithub()
             .then((result) => {
-                navigate('/');
+                toast.success('Login Successful');
+                navigate(from, { replace: true });
             }).catch((error) => {
                 const errorMessage = error.message;
                 setError(errorMessage);
             });
     };
-
     return (
-        <div className='grid grid-cols-2 my-12 justify-items-center place-items-center'>
-            <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 my-12 justify-items-center place-items-center px-3'>
+            <div className='w-1/2 md:w-full'>
                 <Lottie animationData={learning5} loop={true} />;
             </div>
             <div>
