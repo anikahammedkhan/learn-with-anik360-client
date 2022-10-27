@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Lottie from "lottie-react";
 import learning5 from '../../Assets/login.json';
 import { AuthContext } from '../../Context/UserContext';
@@ -8,6 +8,8 @@ const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,7 +19,7 @@ const Login = () => {
         signIn(email, password)
             .then((userCredential) => {
                 form.reset();
-                navigate('/');
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 const errorMessage = error.message;

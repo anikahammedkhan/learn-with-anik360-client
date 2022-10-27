@@ -4,7 +4,6 @@ import { AuthContext } from '../Context/UserContext';
 
 const PrivateRoute = ({ children }) => {
     const location = useLocation();
-    const form = location.state?.form;
     const { user, loading } = useContext(AuthContext);
 
     if (loading) {
@@ -20,7 +19,7 @@ const PrivateRoute = ({ children }) => {
     if (user && user.uid) {
         return children;
     }
-    return <Navigate to='/login' />;
+    return <Navigate to='/login' state={{ from: location }} replace />;
 };
 
 export default PrivateRoute;
