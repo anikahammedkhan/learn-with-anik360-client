@@ -13,7 +13,7 @@ const Error = () => {
                 </svg>
                 <p className="text-3xl">Sorry, we couldn't find this page.</p>
                 <p className="mt-4 mb-8 dark:text-gray-400">But dont worry, you can find plenty of other things on our homepage.</p>
-                <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"><button className='btn btn-accent'>Back to homepage</button></Link>
+                <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 font-semibold rounded dark:text-gray-900"><button className='btn btn-accent'>Back to homepage</button></Link>
             </div>
         </section>
     );

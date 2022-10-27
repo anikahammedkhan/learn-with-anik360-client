@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             {/* hero section start  */}
-            <div className="hero h-[80vh]" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80")` }}>
+            <div className="hero h-[90vh]" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80")` }}>
                 <div className="hero-overlay bg-opacity-70"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
             </div>
             {/* hero section end  */}
-            <div className='grid grid-cols-1 md:grid-cols-2 my-10 gap-4 p-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-8'>
                 <div className='my-auto'>
                     <h1 className='text-5xl font-bold text-sky-500'>Transform Your Life Through Online Education</h1>
                     <p className='my-5 text-lg font-semibold'>Instructors from around the world teach millions of students on Learn With Anik360. We provide the tools and skills to teach what you love. And you can also achieve your goal.</p>

@@ -12,7 +12,7 @@ const Blog = () => {
                     </details>
                     <details className="w-full border rounded-lg">
                         <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">Why are you using firebase? What other options do you have to implement authentication?</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-gray-400">
+                        <div className="px-4 py-6 pt-0 ml-4 -mt-4 text-gray-400">
                             The Firebase Realtime Database lets me build rich, collaborative applications by allowing secure access to the database directly from client-side code. Data is persisted locally, and even while offline, realtime events continue to fire, giving the end user a responsive experience.
                             <br />
                             I can use other options like:
@@ -21,7 +21,7 @@ const Blog = () => {
                                 <li>Auth0</li>
                                 <li>Okta</li>
                             </ul>
-                        </p>
+                        </div>
                     </details>
                     <details className="w-full border rounded-lg">
                         <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">How does the private route work?</summary>
@@ -32,7 +32,7 @@ const Blog = () => {
                     </details>
                     <details className="w-full border rounded-lg">
                         <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">What is Node? How does Node work?</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 text-gray-400">
+                        <div className="px-4 py-6 pt-0 ml-4 -mt-4 text-gray-400">
                             Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. <br />
                             Node.js accepts the request from the clients and sends the response, while working with the request node.js handles them with a single thread. To operate I/O operations or requests node.js use the concept of threads. Thread is a sequence of instructions that the server needs to perform. It runs parallel on the server to provide the information to multiple clients. Node.js is an event loop single-threaded language. It can handle concurrent requests with a single thread without blocking it for one request.
 
@@ -41,7 +41,7 @@ const Blog = () => {
                                 <li>Asynchronous</li>
                                 <li>Non-blocking I/O</li>
                             </ol>
-                        </p>
+                        </div>
                     </details>
                 </div>
             </div>
