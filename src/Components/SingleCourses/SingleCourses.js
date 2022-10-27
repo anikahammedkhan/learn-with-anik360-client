@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Pdf from "react-to-pdf";
+
+const ref = createRef();
+const options = {
+    orientation: 'landscape',
+    unit: 'in',
+    format: [10, 6]
+};
 
 const SingleCourses = () => {
     const singleData = useLoaderData();
@@ -8,9 +16,11 @@ const SingleCourses = () => {
         <div>
             <div className='flex justify-around items-center'>
                 <h1 className="my-12 text-4xl font-bold text-sky-500 text-center">Course Details</h1>
-                <button className='btn btn-outline btn-error'>Download Preview</button>
+                <Pdf targetRef={ref} filename="checkout.pdf" options={options} x={.5} y={.5} scale={0.8}>
+                    {({ toPdf }) => <button onClick={toPdf} className='btn btn-outline btn-error'>Download Preview</button>}
+                </Pdf>
             </div>
-            <div className="card lg:card-side bg-base-100 shadow-xl mb-20 mt-5">
+            <div ref={ref} className="card lg:card-side bg-base-100 shadow-xl mb-20 mt-5">
                 <figure><img className='w-[400px]' src={image} alt="Album" /></figure>
                 <div className="card-body">
                     <h1 className="card-title text-5xl font-bold">{title}</h1>
