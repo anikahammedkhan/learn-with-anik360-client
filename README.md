@@ -1,15 +1,16 @@
 # Project Name : Learn With  Anik360 [LMS website]
 
-### Github Repo Link :
-### Live Website Link :
+### Github Repo Link : https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-anikahammedkhan 
 
-## Project Details:
+### Live Website Link : https://learn-with-anik360.web.app/
+
+# Project Details:
 
 Learn With Anik360 is an online based demo learning platform. 
 Learn with Anik360 have 9 Professional courses that can help you to build your  career and will make you professional at work.
 
 
-#### Frameworks and Libraries: 
+### Frameworks and Libraries: 
 
 * React
 * TailwindCSS
@@ -40,4 +41,4 @@ Learn with Anik360 have 9 Professional courses that can help you to build your  
 
 My email address: anikkhan1105@gmail.com
 
-## Thanks for visiting my site. 
+# Thanks for visiting my site. 
